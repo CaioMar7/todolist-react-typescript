@@ -11,7 +11,7 @@ export function Home() {
     const [task, setTask] = useState<string>("")
     const [taskList, setTaskList] =  useState<ITaskList[]>([]);
 
-    function addNewTask(event: any) {
+    function addNewTask(event: React.SyntheticEvent) {
         event.preventDefault()
         const newTask:ITaskList = {id: taskList.length + 1, name: task}
 
