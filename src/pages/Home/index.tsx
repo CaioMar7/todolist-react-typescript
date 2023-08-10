@@ -15,9 +15,10 @@ export function Home() {
         event.preventDefault()
         const newTask:ITaskList = {id: taskList.length + 1, name: task}
 
-        if(task.length < 4) {
-            return alert("As tarefas precisam ter 4 caractéres ou mais.")
+        if(task.length < 4 || task.length > 40) {
+            return alert("As tarefas precisam ter no mínimo 4 caractéres e no máximo 40 caractéres.")
         }
+
 
         setTask("")
         setTaskList([...taskList, newTask])
